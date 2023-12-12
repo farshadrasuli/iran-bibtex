@@ -30,6 +30,6 @@ First version release date: 2023/12/12.
 
 
 ## Change log
-v0.1 (2023/12/12)
+v0.1.0 (2023/12/12)
   1. First release on CTAN, and GitHub.
   2. Support `@book` entry only
