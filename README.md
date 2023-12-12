@@ -10,7 +10,7 @@ The bibliography style produced by `makebst` program ([custom-bib](https://ctan.
 This package relies on [natbib](https://ctan.org/pkg/natbib) package.
 ___
 
-Copyright (c) 2023 Farshad Rasuli <farshad.rasuli@gmail.com>.</br>
+Copyright (c) 2023 Farshad Rasuli <farshad.rasuli@gmail.com>.
 
 This package distributed under the LaTeX Project Public License. It may be distributed and/or modified under the LaTeX Project Public License, version 1.3c or higher. The latest version of this license is at: http://www.latex-project.org/lppl.txt
 
