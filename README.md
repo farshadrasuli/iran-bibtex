@@ -1,9 +1,9 @@
 # iran-bibtex — Iran Manual of Style Citation Guide for BibTeX
-iran-bibtex is a LaTeX package that provides a BibTeX style based on the [Iran Manual of Style](https://imos.irandoc.ac.ir) (1st edn., 2016) guide to Persian, and English information sources.
+The iran-bibtex package is a LaTeX package that provides a BibTeX style based on the [Iran Manual of Style](https://imos.irandoc.ac.ir) (1st edn., 2016) guide to Persian, and English information sources.
 
 Numerous examples of the use of this package have been prepared and are available in [the package's GitHub repository](https://github.com/farshadrasuli/iran-bibtex).
 
-The bibliography style produced by `makebst` program ([custom-bib](https://ctan.org/pkg/custom-bib) package), then modified to implement Persian/Farsi language and be compatible with the Iran Manual of Style guidelines. A `cp1256fa.csf` file is prepared (based on the [ascii.csf](https://ctan.org/tex-archive/biblio/bibtex/bibtex-x/csf/ascii.csf) file) to sort references alphabetically (Persian/Farsi, then English).
+The bibliography style produced by `makebst` program ([custom-bib](https://ctan.org/pkg/custom-bib) package), then modified to implement Persian/Farsi language and be compatible with the Iran Manual of Style guidelines. A file named `iran-bibtex-cp1256fa.csf` is prepared (based on the [ascii.csf](https://ctan.org/tex-archive/biblio/bibtex/bibtex-x/csf/ascii.csf) file) for this package to sort references alphabetically (Persian/Farsi, then English).
 
 **Important note:** If you want the references to be sorted in alphabetical order, where Persian/Farsi is placed first and then English/Latin, you must run `bibtex8 -W -c iran-bibtex-cp1256fa` for compilation, and your bibliography database file (*.bib) must be encoded in `utf8` encryption. If you want to place English/Latin first, run `bibtex` for compilation and there is no need `utf8` encryption for the `bib` file.
 
