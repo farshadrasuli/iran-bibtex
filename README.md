@@ -1,5 +1,5 @@
 # iran-bibtex — Iran Manual of Style Citation Guide for BibTeX
-iran-bibtex is a LaTeX package that provides a BibTeX style based on the [Iran Manual of Style](https://imos.irandoc.ac.ir) (1st edn., 2016) guidelines.
+iran-bibtex is a LaTeX package that provides a BibTeX style based on the [Iran Manual of Style](https://imos.irandoc.ac.ir) (1st edn., 2016) guide to Persian, and English information sources.
 
 Numerous examples of the use of this package have been prepared and are available in the package's GitHub repository.
 
@@ -7,7 +7,7 @@ The bibliography style produced by `makebst` program ([custom-bib](https://ctan.
 
 **Important note:** If you want the references to be sorted in alphabetical order, where Persian/Farsi is placed first and then English/Latin, you must run `bibtex8 -W -c cp1256fa`, and your bibliography database file (*.bib) must be encoded in `utf8` encryption.
 
-This package relies on [natbib](https://ctan.org/pkg/natbib) package.
+This package relies on [natbib](https://ctan.org/pkg/natbib) package and works only with [xepersian](https://ctan.org/pkg/xepersian) package.
 ___
 
 Copyright (c) 2023 Farshad Rasuli <farshad.rasuli@gmail.com>.
