@@ -8,3 +8,8 @@ The bibliography style produced by `makebst` program ([custom-bib](https://ctan.
 Important note: your bibliography database file (*.bib) must be encoded in `utf8` encryption.
 
 This package relies on [natbib](https://ctan.org/pkg/natbib) package.
+
+## Change log
+v0.1 (2023/12/12)
+  1. First release on CTAN, and GitHub.
+  2. Support `@book` entry only
