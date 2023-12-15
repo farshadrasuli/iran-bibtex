@@ -27,6 +27,15 @@ If you want to report any bugs or issues, please use [the issue tracker](https:/
 
 ## Change log
 First version release date: 2023/12/12.
+Current version release date: 2023/12/15.
+
+v0.2.0 (2023/12/15)
+  1. Made some improvements
+  2. Support `@article` entry was also added
+  3. Support `@incollection` entry was also added
+  4. Support `@proceedings` entry was also added
+  5. Support `@inproceedings` entry was also added
+  6. Support `@conference` entry was also added
 
 v0.1.0 (2023/12/12)
   1. First release on CTAN, and GitHub.
