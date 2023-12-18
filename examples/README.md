@@ -1,4 +1,5 @@
 # Example Navigator
+
 The types of entries used in each example will be listed here.
 
 * Example-IMOS-2.026: `@book`
@@ -53,6 +54,26 @@ The types of entries used in each example will be listed here.
 * Example-IMOS-2.170: `@article`
 * Example-IMOS-2.177: `@article`
 * Example-IMOS-2.179: `@article`
+* Example-IMOS-2.189: `@article`
+* Example-IMOS-2.190: `@article`
+* Example-IMOS-2.191: `@article`
+* Example-IMOS-2.195: `@article`
+* Example-IMOS-2.203: `@incollection`, `@article`
+* Example-IMOS-2.209: `@mastersthesis`, `@phdthesis`
+* Example-IMOS-2.210: `@conference`
+* Example-IMOS-2.211: `@conference`
+* Example-IMOS-2.212: `@unpublished`
+* Example-IMOS-2.213: `@unpublished`
+* Example-IMOS-2.214: `@unpublished`
+* Example-IMOS-2.215: `@misc`
+* Example-IMOS-2.219: `@book`
+* Example-IMOS-2.223: `@book`
 * Example-IMOS-2.224: `@book`
+* Example-IMOS-2.225: `@incollection`
+* Example-IMOS-2.230: `@book`
+* Example-IMOS-2.235: `@incollection`
+* Example-IMOS-2.236: `@unpublished`
 * Example-IMOS-2.239: `@book`
 * Example-IMOS-2.240: `@book`
+* Example-IMOS-2.246: `@book`
+* Example-IMOS-2.248: `@book`
