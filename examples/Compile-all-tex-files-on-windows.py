@@ -4,7 +4,7 @@
 #     This file provided by (c) Farshad Rasuli, 2023.
 #
 # E-Mail: <farshad.rasuli@gmail.com>
-# <github.com/farshadrasuli/>
+# <github.com/farshadrasuli/iran-bibtex>
 # <farshadrasuli.github.io/>
 # 
 # python 3.9.13
