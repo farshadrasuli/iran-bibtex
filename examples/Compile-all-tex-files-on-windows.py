@@ -1,5 +1,5 @@
 # -----------------------------------------------------------------------------
-# Compile-all-tex-files-in-windows.py
+# Compile-all-tex-files-on-windows.py
 #
 #     This file provided by (c) Farshad Rasuli, 2023.
 #
