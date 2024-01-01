@@ -80,4 +80,4 @@ The types of entries used in each example will be listed [here](https://github.c
 | Example-IMOS-2.246      | `@book`                            | Legal and public document<br>مدرک قانونی، بخش عمومی |
 | Example-IMOS-2.248      | `@book`                            | Legal and public document online<br>مدرک قانونی، بخش عمومی برخط |
 
-[$\uparrow$ top](#example-navigation)
+$\uparrow$ [top](#example-navigation)
