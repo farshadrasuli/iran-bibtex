@@ -1,6 +1,6 @@
 # Example Navigation
 
-The types of entries used in each example will be listed [here](https://github.com/farshadrasuli/iran-bibtex/tree/main/examples/README.md).
+The types of entries used in each example will be listed [here](https://github.com/farshadrasuli/iran-bibtex/tree/main/examples/README.md)
 
 | Example group name      | Entry                              | Description<br>توضیح |
 | ----------------------- | ---------------------------------- | ----------- |
