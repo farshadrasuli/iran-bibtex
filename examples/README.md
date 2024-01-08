@@ -11,7 +11,7 @@ The types of entries used in each example will be listed [here](https://github.c
 | Example-IMOS-2.032_33   | `@book`                            | Book with anonymous author<br>کتاب با پدیدآونده‌ی ناشناس |
 | Example-IMOS-2.035_37   | `@book`                            | Book with author's pseudonym<br>کتاب با نام مستعار نویسنده |
 | Example-IMOS-2.041_43   | `@book`                            | ‌Book with editor (or compiler) as author<br> کتاب با ویراستار (یا گردآورنده) به جای نویسنده |
-| Example-IMOS-2.044a     | `@book`                            | ‌Book with translator, and author<br>مترجم همراه با نویسنده‌ی کتاب |
+| Example-IMOS-2.044      | `@book`                            | ‌Book with translator, and author<br>مترجم همراه با نویسنده‌ی کتاب |
 | Example-IMOS-2.045_47   | `@book`                            | Book with “Introduction by,” “In collaboration with,” or “Under the supervision of” another person<br>کتاب همراه با «با مقدمه‌ی»، «با همکاری»، یا «زیرنظر» دیگری |
 | Example-IMOS-2.048      | `@book`                            | Document published by an organization, or corporation<br>اثر منتشر شده از سوی یک سازمان، یا شرکت |
 | Example-IMOS-2.064      | `@book`                            | ‌Book with impression number<br>کتاب با نوبت چاپ |
