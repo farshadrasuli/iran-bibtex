@@ -1,0 +1,118 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% FILE: $RCSfile: iran-bibtex-cp1256fa.csf,v $
+%%       $Revision: 1.0.1 $
+%%       $Date: 2024/01/8 $
+%%
+%% AUTHOR: Farshad Rasuli <farshad.rasuli@gmail.com>
+%%
+%% CHARACTER SET: ASCII + Persian/Farsi (Code Page 1256)
+%%
+%%
+%% SORTING ORDER: Persian-English
+%%
+%%
+%% WARNING
+%%
+%%      This is a BibTeX Codepage and Sort definition file (CSF).  It is
+%%      used to define the 8-bit character set used by BibTeX and the
+%%      order in which those characters should be sorted.
+%%
+%%      This file will only work with the 8-bit implementation of BibTeX 
+%%      written by Niel Kempson and Alejandro Aguilar-Sierra.
+%%
+%%
+%% CHANGE LOG
+%%
+%%      $Log: iran-bibtex-cp1256fa.csf,v $
+%%      
+%%      Revision 1.0.1  2024/01/8 rasuli
+%%      Add Arabic-indic digits
+%%      Shift English/Latin digits to top
+%%      
+%%      Revision 1.0  2023/12/8 rasuli
+%%      Initial release
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%
+%% SORTING ORDER
+%%
+%%  The sorting order defined is the Persian language sorting order then the
+%%  natural English language sorting order (i.e. 0...9AaBb...YyZz).  Any other
+%%  characters will be sorted after the characters in the \order section.
+%%
+\order{
+    ۰ ٠ 0
+    ۱ ١ 1
+    ۲ ٢ 2
+    ۳ ٣ 3
+    ۴ ٤ 4
+    ۵ ٥ 5
+    ۶ ٦ 6
+    ۷ ٧ 7
+    ۸ ٨ 8
+    ۹ ٩ 9
+    ء أ إ ئ ؤ
+    آ
+    ا
+    ب
+    پ
+    ت ة
+    ث
+    ج
+    چ
+    ح
+    خ
+    د
+    ذ
+    ر
+    ز
+    ژ
+    س
+    ش
+    ص
+    ض
+    ط
+    ظ
+    ع
+    غ
+    ف
+    ق
+    ک ك
+    گ
+    ل
+    م
+    ن
+    و
+    ه
+    ی ي
+    A a
+    B b
+    C c
+    D d
+    E e
+    F f
+    G g
+    H h
+    I i
+    J j
+    K k
+    L l
+    M m
+    N n
+    O o
+    P p
+    Q q
+    R r
+    S s
+    T t
+    U u
+    V v
+    W w
+    X x
+    Y y
+    Z z
+}
