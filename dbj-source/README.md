@@ -1,7 +1,13 @@
-# What is the `iran-platform.dbj` file?
+# What Are These Source Files?
 
-The `iran-platform.dbj` file has been created by the `makebst` program ([custom-bib](https://ctan.org/pkg/custom-bib) package). The BibTeX bibliography style (`bst`)  file obtained by this file (`iran-platform.bst`) became a platform for creating other bibliography style files in this package.
+These `.dbj` source files have been generated using the `makebst` program from the [custom-bib](https://ctan.org/pkg/custom-bib) package. The resulting BibTeX style files (`bst`) serves as a foundation for creating additional bibliography style files within this package.
 
-## How do I use `iran-platform.dbj` to create a `bst` file?
+## How to use `filename.dbj` to create a `filename.bst` file?
 
-Open a terminal/command promopt and run `latex iran-platform.dbj`. Done!
+To create a `bst` file, open a terminal/command prompt and run the command:
+
+```bash
+latex filename.dbj
+```
+
+That's it!
