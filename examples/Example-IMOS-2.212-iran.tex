@@ -1,0 +1,48 @@
+% !TEX TS-program = XeLaTeX
+% Compilation procedure for this file:
+% xelatex Example-IMOS-2.212-iran.tex
+% bibtex8 -W -c iran-bibtex-cp1256fa Example-IMOS-2.212-iran
+% xelatex Example-IMOS-2.212-iran.tex
+% xelatex Example-IMOS-2.212-iran.tex
+
+\documentclass[a4paper,10pt]{article}
+
+
+\usepackage[iran]{iran-bibtex}
+\usepackage[colorlinks,citecolor=blue,breaklinks=true]{hyperref}
+
+\usepackage[localise,perpagefootnote=on,computeautoilg=on]{xepersian}
+\settextfont{Parsi Nevis}
+
+
+
+
+
+\begin{document}
+\title{شیوه‌ی استناددهی ایران
+\LTRfootnote{ \tt \textbackslash usepackage[iran]\{iran-bibtex\} } }
+\author{}
+\date{}
+\maketitle
+
+
+
+\section*{مثال ۲.۲۱۲: جزوه‌ی کلاسی}
+
+زیربخش ۱. استاد نسخه‌ای از جزوه را در اختیار دانشجو قرار دهد که عنوان داشته باشد.\\
+\cite{رضائیان1370الف}\\
+
+زیربخش ۲. استاد نسخه‌ای از جزوه را در اختیار دانشجو قرار دهد که عنوان نداشته باشد.\\
+\cite{رضائیان1370ب}\\
+
+زیربخش ۳. استاد درس را بازگو کرده و دانشجو گفته‌ها، و تقریرها را یادداشت کند.\\
+\cite{رضائیان1370پ}\\
+
+
+
+
+
+\bibliography{Example-IMOS-2.212}
+
+
+\end{document}

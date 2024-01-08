@@ -1,0 +1,44 @@
+% !TEX TS-program = XeLaTeX
+% Compilation procedure for this file:
+% xelatex Example-IMOS-2.110-iran-plainyr.tex
+% bibtex8 -W -c iran-bibtex-cp1256fa Example-IMOS-2.110-iran-plainyr
+% xelatex Example-IMOS-2.110-iran-plainyr.tex
+% xelatex Example-IMOS-2.110-iran-plainyr.tex
+
+\documentclass[a4paper,10pt]{article}
+
+
+\usepackage[iran-plainyr]{iran-bibtex}
+\usepackage[colorlinks,citecolor=blue,breaklinks=true]{hyperref}
+
+\usepackage[localise,perpagefootnote=on,computeautoilg=on]{xepersian}
+\settextfont{Parsi Nevis}
+
+
+
+
+
+\begin{document}
+\title{شیوه‌ی استناددهی ایران
+\LTRfootnote{ \tt \textbackslash usepackage[iran-plainyr]\{iran-bibtex\} } }
+\author{}
+\date{}
+\maketitle
+
+
+
+\section*{مثال ۲.۱۱۰: فروست یا کتاب چند جلدی}
+
+\cite{عربی1373}\\
+\cite{حسننایبی1377}\\
+\cite{boyer1986}\\
+\cite{cochrane1987}\\
+
+
+
+
+
+\bibliography{Example-IMOS-2.110}
+
+
+\end{document}

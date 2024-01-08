@@ -1,0 +1,44 @@
+% !TEX TS-program = XeLaTeX
+% Compilation procedure for this file:
+% xelatex Example-IMOS-2.098-iran.tex
+% bibtex8 -W -c iran-bibtex-cp1256fa Example-IMOS-2.098-iran
+% xelatex Example-IMOS-2.098-iran.tex
+% xelatex Example-IMOS-2.098-iran.tex
+
+\documentclass[a4paper,10pt]{article}
+
+
+\usepackage[iran]{iran-bibtex}
+\usepackage[colorlinks,citecolor=blue,breaklinks=true]{hyperref}
+
+\usepackage[localise,perpagefootnote=on,computeautoilg=on]{xepersian}
+\settextfont{Parsi Nevis}
+
+
+
+
+
+\begin{document}
+\title{شیوه‌ی استناددهی ایران
+\LTRfootnote{ \tt \textbackslash usepackage[iran]\{iran-bibtex\} } }
+\author{}
+\date{}
+\maketitle
+
+
+
+\section*{مثال ۲.۹۸: ویرایشی غیر از ویرایش نخست کتاب}
+
+\cite{ماهبان1354}\\
+\cite{سینایی1382}\\
+\cite{anderson1982}\\
+\cite{weber1928}\\
+
+
+
+
+
+\bibliography{Example-IMOS-2.098}
+
+
+\end{document}

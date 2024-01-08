@@ -1,0 +1,42 @@
+% !TEX TS-program = XeLaTeX
+% Compilation procedure for this file:
+% xelatex Example-IMOS-2.087-iran-year.tex
+% bibtex8 -W -c iran-bibtex-cp1256fa Example-IMOS-2.087-iran-year
+% xelatex Example-IMOS-2.087-iran-year.tex
+% xelatex Example-IMOS-2.087-iran-year.tex
+
+\documentclass[a4paper,10pt]{article}
+
+
+\usepackage[iran-year]{iran-bibtex}
+\usepackage[colorlinks,citecolor=blue,breaklinks=true]{hyperref}
+
+\usepackage[localise,perpagefootnote=on,computeautoilg=on]{xepersian}
+\settextfont{Parsi Nevis}
+
+
+
+
+
+\begin{document}
+\title{شیوه‌ی استناددهی ایران
+\LTRfootnote{ \tt \textbackslash usepackage[iran-year]\{iran-bibtex\} } }
+\author{}
+\date{}
+\maketitle
+
+
+
+\section*{مثال ۲.۸۷: ترجمه‌ی منتشرنشده‌ی یک کتاب (یا کتاب ترجمه نشده)}
+
+\cite{هانسکر1980}\\
+\cite{pirumova1977}\\
+
+
+
+
+
+\bibliography{Example-IMOS-2.087}
+
+
+\end{document}
