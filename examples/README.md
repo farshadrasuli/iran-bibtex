@@ -50,7 +50,7 @@ The types of entries used in each example will be listed [here](https://github.c
 | Example-IMOS-2.158      | `@article`                         | Italic term, and quote in the title of an article<br>ایتالیک، و گفتاورد در یک مقاله |
 | Example-IMOS-2.162      | `@article`                         | Volume in an article<br>جلد در مقاله |
 | Example-IMOS-2.164      | `@article`                         | Number of an article<br>شماره (نسخه‌ی) مقاله |
-| Example-IMOS-2.165      | `@article`                         | Article without volume<br>مقاله بدون جلد |
+| Example-IMOS-2.165      | `@article`                         | Article without volume (period)<br>مقاله بدون جلد (دوره) |
 | Example-IMOS-2.170      | `@article`                         | Article in a special issue<br>مقاله در ویژه‌نامه |
 | Example-IMOS-2.177      | `@article`                         | Title of the translated article<br>عنوان مقاله‌ی ترجمه‌شده |
 | Example-IMOS-2.179      | `@article`                         | Pages of an article<br>صفحه‌های آغاز، و پایان یک مقاله |
