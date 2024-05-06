@@ -1,0 +1,47 @@
+% !TEX TS-program = XeLaTeX
+% Compilation procedure for this file:
+% xelatex Superscript-Numbered-Style.tex
+% bibtex8 -W -c iran-bibtex-cp1256fa Superscript-Numbered-Style
+% xelatex Superscript-Numbered-Style.tex
+% xelatex Superscript-Numbered-Style.tex
+
+\documentclass[a4paper,10pt]{article}
+
+
+\usepackage[iran-unsrt,super]{iran-bibtex}
+
+\makeatletter
+\renewcommand{\NAT@open}{}
+\renewcommand{\NAT@close}{}
+\renewcommand{\@biblabel}[1]{#1.}
+\makeatother
+
+\usepackage[colorlinks,citecolor=blue,breaklinks=true]{hyperref}
+
+\usepackage[localise,perpagefootnote=on,computeautoilg=on]{xepersian}
+\settextfont{Parsi Nevis}
+
+
+
+
+
+\begin{document}
+\title{بسته‌ی استناددهی \lr{\bf\sffamily iran-bibtex}}
+\author{}
+\date{}
+\maketitle
+
+
+
+\section*{مثال افزوده: سبک استناددهی شماره‌گذاری شده‌ی بالانویس}
+
+در این سبک استناددهی که توسط راهنماهایی مانند \lr{AMA}، \lr{Vancouver}، \lr{Nature}، و \lr{The Lancent} به کار میرود، استناد به هر مرجع\cite{کمالزاده1388} به شکل اندیس بالانویس نوشته شده و مرجعها به ترتیب استناد در متن\cite{kasper1999,salinger1951} مرتب، و شماره‌گذاری میشوند.
+
+
+
+
+
+\bibliography{Superscript-Numbered-Citation-Style}
+
+
+\end{document}
