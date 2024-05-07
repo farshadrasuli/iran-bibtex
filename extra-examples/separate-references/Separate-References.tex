@@ -1,0 +1,59 @@
+% !TEX TS-program = XeLaTeX
+% Compilation procedure for this file:
+% xelatex Separate-References.tex
+% bibtex8 -W -c iran-bibtex-cp1256fa Separate-References
+% bibtex8 -W -c iran-bibtex-cp1256fa fa
+% bibtex8 -W -c iran-bibtex-cp1256fa en
+% xelatex Separate-References.tex
+% xelatex Separate-References.tex
+
+\documentclass[a4paper,10pt]{article}
+
+
+\usepackage[iran]{iran-bibtex}
+
+% use multibib package to separate references
+\usepackage{multibib}
+
+\newcites{fa}{مرجع‌های فارسی}
+\newcites{en}{مرجع‌های انگلیسی}
+
+\bibliographystylefa{iran}
+\bibliographystyleen{iran}
+
+
+\usepackage[colorlinks,citecolor=blue,breaklinks=true]{hyperref}
+
+\usepackage[localise,perpagefootnote=on,computeautoilg=on]{xepersian}
+\settextfont{Parsi Nevis}
+
+
+
+
+
+\begin{document}
+\title{بسته‌ی استناددهی \lr{\bf\sffamily iran-bibtex}}
+\author{}
+\date{}
+\maketitle
+
+
+
+\section*{مثال افزوده: جدا کردن مرجعهای فارسی، و انگلیسی}
+
+\citefa{کمالزاده1388}\\
+\citefa{مهاجر1398}\\
+\citeen{kasper1999}\\
+\citeen{suangtho1990}
+
+
+
+
+
+\bibliographyfa{Separate-References}
+
+
+\bibliographyen{Separate-References}
+
+
+\end{document}
