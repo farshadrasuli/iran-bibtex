@@ -1,0 +1,254 @@
+%%
+%% This is file “iran-bibtex.sty”, v0.4.3 (2024-08-04)
+%%
+%%   __________________________________________________
+%%   Copyright (c) 2023-2024 Farshad Rasuli
+%% 
+%%   It may be distributed and/or modified under the LaTeX Project
+%%   Public License version 1.3c or higher. The latest version of the
+%%   Lisense is at: http://www.latex-project.org/lppl.txt
+%% 
+%%   This work is “author-maintained” (as per LPPL maintenance status)
+%%   by Farshad Rasuli.
+%% 
+%%   Catalogue on CTAN: ctan.org/pkg/iran-bibtex
+%% 
+%%   Archive on CTAN : ctan.org/tex-archive/biblio/bibtex/contrib/iran-bibtex
+%% 
+%%   Repository: github.com/farshadrasuli/iran-bibtex
+%% 
+%%   Issue tracker: github.com/farshadrasuli/iran-bibtex/issues
+%% 
+%% 
+
+
+
+% === Package structure: Identification
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{iran-bibtex}
+        [2024-08-04 v0.4.3 Iran Manual of Style (1st edn, 2016)]
+
+\def\iranbibtex@version{0.4.3}
+\def\iranbibtexdate{2024-08-04} % August 4th, 2024
+\def\iranbibtexfirstrelease{2023-12-12} % December 12th, 2023
+\edef\@iranbibtex@info{%
+***************************************************************%
+*                                                             *%
+* iran-bibtex package v\iranbibtex@version\ (\iranbibtexdate) *%
+*                                                             *%
+* Description: This package is an implementation of           *%
+* the Iran Manual of Style (1st edition, 2016)                *%
+* citation guide to Persian and English information           *%
+* sources in BibTeX.                                          *%
+*                                                             *%
+* Copyright (c) 2023-2024 Farshad Rasuli                      *%
+*                                                             *%
+***************************************************************%
+}
+
+
+% === Package structure: Preliminary declarations
+
+
+
+
+
+% === Package structures: Options
+
+%% iran bibliography style: author-year style, sorted by authors' name
+\DeclareOption{iran}
+{%
+    \PassOptionsToPackage{authoryear,round,sort&compress}{natbib}%
+	\bibliographystyle{iran}%
+}
+
+
+
+%% iran bibliography style: numbered style, sorted by authors' name
+\DeclareOption{iran-plain}
+{%
+	\PassOptionsToPackage{numbers,square,sort&compress}{natbib}%
+	\bibliographystyle{iran}%
+}
+
+
+
+%% iran bibliography style: author-year style, sorted by year
+\DeclareOption{iran-year}
+{%
+    \PassOptionsToPackage{authoryear,round,sort&compress}{natbib}%
+	\bibliographystyle{iran-year}%
+}
+
+
+
+%% iran bibliography style: numbered style, sorted by year
+\DeclareOption{iran-plainyr}
+{%
+	\PassOptionsToPackage{numbers,square,sort&compress}{natbib}%
+	\bibliographystyle{iran-year}%
+}
+
+
+
+%% iran bibliography style: numbered style, sorted by citation order
+\DeclareOption{iran-unsrt}
+{%
+	\PassOptionsToPackage{numbers,square,sort&compress}{natbib}%
+	\bibliographystyle{iran-unsrt}%
+}
+
+
+
+%% iran bibliography style for English/Latin document: author-year style, sorted by authors' name
+\DeclareOption{iranlatin}
+{%
+    \PassOptionsToPackage{authoryear,round,sort&compress}{natbib}%
+	\bibliographystyle{iranlatin}%
+}
+
+
+
+%% iran bibliography style for English/Latin document: numbered style, sorted by authors' name
+\DeclareOption{iranlatin-plain}
+{%
+	\PassOptionsToPackage{numbers,square,sort&compress}{natbib}%
+	\bibliographystyle{iranlatin}%
+}
+
+
+
+%% iran bibliography style for English/Latin document: author-year style, sorted by year
+\DeclareOption{iranlatin-year}
+{%
+    \PassOptionsToPackage{authoryear,round,sort&compress}{natbib}%
+	\bibliographystyle{iranlatin-year}%
+}
+
+
+
+%% iran bibliography style for English/Latin document: numbered style, sorted by year
+\DeclareOption{iranlatin-plainyr}
+{%
+	\PassOptionsToPackage{numbers,square,sort&compress}{natbib}%
+	\bibliographystyle{iranlatin-year}%
+}
+
+
+
+%% iran bibliography style for English/Latin document: numbered style, sorted by citation order
+\DeclareOption{iranlatin-unsrt}
+{%
+	\PassOptionsToPackage{numbers,square,sort&compress}{natbib}%
+	\bibliographystyle{iranlatin-unsrt}%
+}
+
+
+
+
+%% other options pass to natbib package
+\DeclareOption*{\PassOptionsToPackage{\CurrentOption}{natbib}}
+
+
+
+\ProcessOptions\relax
+
+
+
+\RequirePackage{natbib}
+\setcitestyle{aysep={}}% between author and year
+
+
+
+
+
+
+% === Package structure: Provide commands
+
+%% provide command for bibliography environment
+\newcommand{\enquote}[1]{``#1''}
+\newcommand{\faquote}[1]{«#1»}
+\providecommand{\url}[1]{\@ifpackageloaded{hyperref}{\href{#1}{#1}}{\tt #1}}
+\providecommand{\doi}[1]{\@ifpackageloaded{hyperref}{\href{https://doi.org/#1}{#1}}{\url{#1}}}
+\providecommand{\eprint}[2][]{\@ifpackageloaded{hyperref}{\href{#2}{#2}}{\url{#2}}}
+
+
+
+% renew \cite command to behave like \citep in the natbib package
+\renewcommand{\cite}{%
+\begingroup\NAT@swatrue\def\NAT@ctype{0}\NAT@partrue
+\@ifstar{\NAT@fulltrue\NAT@citetp}{\NAT@fullfalse\NAT@citetp}%
+                    }
+
+
+
+
+
+% === Package structure: Modifying the extra label that is appended to the year for one author in the same year
+
+%% Modify extra label of Latin bib items
+\def\extrayearlabelen#1{#1}
+
+
+
+%% Modify extra label of Persian bib items
+\newcommand\makeswitch[2][]%
+{%
+  \newcommand#2[1]% create a switch named #2 which takes one argument
+  {%
+  \ifcsname\string#2@case@##1\endcsname% check switch and case is exist or not
+  \csname\string#2@case@##1\endcsname% execute the switch and case
+  \else#1% expand #1 (first arugument of makeswitch)
+  \fi%
+  }%
+}
+
+\newcommand\addcase[3]{\expandafter\def\csname\string#1@case@#2\endcsname{#3}}
+
+\makeswitch[#1]\extrayearlabelfa
+
+\addcase\extrayearlabelfa{a}{الف}
+\addcase\extrayearlabelfa{b}{ب}
+\addcase\extrayearlabelfa{c}{پ}
+\addcase\extrayearlabelfa{d}{ت}
+\addcase\extrayearlabelfa{e}{ث}
+\addcase\extrayearlabelfa{f}{ج}
+\addcase\extrayearlabelfa{g}{چ}
+\addcase\extrayearlabelfa{h}{ح}
+\addcase\extrayearlabelfa{i}{خ}
+\addcase\extrayearlabelfa{j}{د}
+\addcase\extrayearlabelfa{k}{ذ}
+\addcase\extrayearlabelfa{l}{ر}
+\addcase\extrayearlabelfa{m}{ز}
+\addcase\extrayearlabelfa{n}{ژ}
+\addcase\extrayearlabelfa{o}{س}
+\addcase\extrayearlabelfa{p}{ش}
+\addcase\extrayearlabelfa{q}{ص}
+\addcase\extrayearlabelfa{r}{ض}
+\addcase\extrayearlabelfa{s}{ط}
+\addcase\extrayearlabelfa{t}{ظ}
+\addcase\extrayearlabelfa{u}{ع}
+\addcase\extrayearlabelfa{v}{غ}
+\addcase\extrayearlabelfa{w}{ف}
+\addcase\extrayearlabelfa{x}{ق}
+\addcase\extrayearlabelfa{y}{ک}
+\addcase\extrayearlabelfa{z}{گ}
+\addcase\extrayearlabelfa{aa}{ل}
+\addcase\extrayearlabelfa{ab}{م}
+\addcase\extrayearlabelfa{ac}{ن}
+\addcase\extrayearlabelfa{ad}{و}
+\addcase\extrayearlabelfa{ae}{ه‍}
+\addcase\extrayearlabelfa{af}{ی}
+
+
+
+
+
+
+
+
+
+
+\endinput
+%%
+%% End of file “iran-bibtex.sty”.

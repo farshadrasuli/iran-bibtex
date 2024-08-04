@@ -1,0 +1,231 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[usenames]{color}
+\usepackage{xcolor}
+\usepackage{xecolor}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{verbatim}
+
+\usepackage[colorlinks,citecolor=green]{hyperref}
+
+\usepackage[localise,perpagefootnote=on,computeautoilg=on]{xepersian}
+\settextfont{Parsi Nevis}
+\setpersianmonofont{Vazir Code}
+\setlatintextfont{Parsi Nevis}
+
+\SepMark{-}
+\eqcommand{زیرنویس‌لاتین}{LTRfootnote}
+\eqcommand{م‌ل}{lr}
+\eqcommand{ارجاع}{ref}
+\eqcommand{فرارجاع}{eqref}
+\eqcommand{صفحه‌ارجاع}{pageref}
+\eqcommand{استناد}{cite}
+\eqcommand{استنادلاتین}{Latincite}
+\eqcommand{استنادپ}{citep}
+\eqcommand{استنادم}{citet}
+
+
+\setlength{\parskip}{6pt minus 2pt}
+
+\makeatletter
+\def\HyColor@@@UseColor[#1]#2\@nil{\xecolor[{#1}]{#2}}
+\def\HyColor@@@@UseColor#1\@nil{\xecolor{#1}}
+\makeatother
+
+
+
+
+
+\begin{document}
+
+
+
+\title{راهنمای کاربر بسته‌ی \lr{\bf\sffamily iran-bibtex}}
+\author{فرشاد رسولی\thanks{رایانامه: \url{farshad.rasuli@gmail.com}}}
+\date{نسخه‌ی ۰٫۴٫۳ --- ۱۴ اَمُرداد ۱۴۰۳}
+\maketitle
+
+
+\begin{abstract}
+این بسته با هدف پیاده‌سازی شیوه‌نامه‌ی ایران در سامانه‌ی لاتک تهیه شده است. شیوه‌نامه‌ی ایران که یک شیوه‌نامه برای فهرست‌نویسی منبعهای اطلاعاتی به فارسی، و انگلیسی است بر پایه‌ی ویرایش شانزدهم شیوه‌نامه‌ی شیکاگو در سال ۱۳۹۵ توسط ایرانداک منتشر شده است. با این بسته، شما میتوانید از سبکهای مختلف استناددهی درون متنی که فهرست‌نویسی منبعهای اطلاعاتی بر پایه‌ی شیوه‌نامه‌ی ایران است استفاده کنید.
+\end{abstract}
+
+
+
+\section{شیوه‌نامه‌ی ایران}
+شیوه‌نامه‌ی ایران یک شیوه‌نامه‌ی فهرست‌نویسی منبعهای اطلاعاتی به زبان فارسی، و انگلیسی است که در سال ۱۳۹۵ توسط ایرانداک\زیرنویس{پژوهشگاه علوم و فناوری اطلاعات ایران} تهیه و منتشر شده است. این بسته با هدف پیاده‌سازی این شیوه‌نامه در سامانه‌ی لاتک برای استفاده در نوشتارهای فارسی، و انگلیسی آماده شده است.
+
+
+این بسته به گونه‌ای طراحی شده است که در نوشتارهای فارسی که با \XePersian{} آماده شده و با موتور \XeTeX{} پردازش میشوند و نوشتارهای غیرفارسی که با دیگر موتورهای پردازش آماده میشوند کاربرد دارد.
+
+
+برای استنادهای درون متنی، پیش‌نهاد شیوه‌نامه‌ی ایران استفاده از سبک پدیدآورنده-سال است؛ ولی از آن‌جایی که سبکهای استناددهی مختلفی در سامانه‌ی لاتک وجود دارد، با حفظ اصلهای این شیوه‌نامه در فهرست‌نویسی منبعهای اطلاعاتی، دیگر سبکهای استناددهی درون متنی مانند سبکهای شماره‌گذاری نیز افزوده شده است.
+
+
+\section{فراخوانی بسته}
+برای فراخوانی بسته‌ی ایران-بیب‌تک کافی است این بسته را با این فرمان فراخوانی کنید:\\
+\hspace*{\fill}\lr{\tt \textbackslash usepackage[<bibstyle>,<options>]\{iran-bibtex\}}
+
+
+سبک استناددهی مورد نیاز در بخش \م‌ل{\tt <bibstyle>} تعیین میشود. با استفاده از این بسته، دیگر نیازی به استفاده از فرمان\\
+\hspace*{\fill}\lr{\tt \textbackslash bibliographystyle\{<style>\}}\\
+برای تعیین سبک استناددهی نخواهید داشت و بسته‌ی ایران-بیب‌تک، پرونده‌ی \م‌ل{\tt *.bst} مورد نیاز را انتخاب میکند. اگر این فرمان در پرونده‌ی شما وجود دارد، پیش از پردازش پرونده، آن را حذف کنید سپس با تعیین پایگاه داده مرجعها\LTRfootnote{bibliography database} پرونده را پردازش کنید.
+
+
+توجه کنید که این بسته با بسته‌ی \م‌ل{\sffamily natbib} کار میکند؛ از این رو، با فراخوانی این بسته، بسته‌ی \م‌ل{\sffamily natbib} نیز فراخوانی میشود و هر گزینه‌ای که به عنوان \م‌ل{\tt <options>} تعیین شود توسط بسته‌ی \م‌ل{\sffamily natbib} پردازش و اجرا میگردد؛ از این رو، راهنمای این بسته را بخوانید.
+
+
+پیش‌نهاد میشود که بسته‌ی ایران-بیب‌تک را پیش از بسته‌ی \م‌ل{\sffamily hyperref} فراخوانی کنید.
+
+
+برای تولید خروجی نوشتارهای فارسی کافی است پرونده‌ی موردنظر را به این ترتیب پردازش کنید:
+\begin{itemize}[noitemsep, topsep=0pt]
+\begin{latinitems}
+\item \texttt{xelatex file.tex}
+\item \texttt{bibtex8 -W -c iran-bibtex-cp1256fa file}
+\item \texttt{xelatex file.tex}
+\item \texttt{xelatex file.tex}
+\end{latinitems}
+\end{itemize}
+
+
+فرمان \م‌ل{\tt bibtex8 -W -c iran-bibtex-cp1256fa file} مرجعهای غیرفارسی را پس از مرجعهای فارسی فهرست میکند. اگر میخواهید که مرجعهای غیرفارسی پیش از مرجعهای فارسی فهرست شوند فرمان \م‌ل{\tt bibtex8 file} را جایگزین کنید.
+
+
+
+
+\section{استفاده از بسته}
+
+
+\subsection{سبکهای استناددهی آماده شده در این بسته}
+
+سبکهای استناددهی آماده شده در این بسته در جدولهای~\ارجاع{tab:iran-cite-styles}، و \ارجاع{tab:iranlatin-cite-styles} فهرست شده‌اند. سبکهای استناددهی در جدول~\ارجاع{tab:iran-cite-styles} برای استفاده در نوشتارهای فارسی و سبکهای استناددهی در جدول~\ارجاع{tab:iranlatin-cite-styles} برای استفاده در نوشتارهای غیرفارسی به کار میروند.
+
+\begin{table}[!hbt] \centering
+\caption{سبکهای استناددهی آماده شده برای استفاده در نوشتارهای فارسی}
+\label{tab:iran-cite-styles}
+\begin{tabular}{cccc}
+\hline
+\thead{سبک\\استناددهی} & \thead{شیوه‌ی\\استناددهی} & \thead{شیوه‌ی مرتب‌سازی} & \thead{نمونه استناد\\درون متنی}\\
+\hline
+\م‌ل{\tt iran} & پدیدآورنده-سال & نام پدیدآورندگان & (کیانی ۱۳۹۵)\\
+\م‌ل{\tt iran-plain} & شماره‌گذاری & نام پدیدآورندگان & [۱]\\
+\م‌ل{\tt iran-year} & پدیدآورنده-سال & سال اثر & (کیانی ۱۳۹۵)\\
+\م‌ل{\tt iran-plainyr} & شماره‌گذاری & سال اثر & [۱]\\
+\م‌ل{\tt iran-unsrt} & شماره‌گذاری & استناد در متن &[۱]\\
+\hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[!hbt] \centering
+\caption{سبکهای استناددهی آماده شده برای استفاده در نوشتارهای غیرفارسی}\label{tab:iranlatin-cite-styles}
+\begin{tabular}{cccc}
+\hline
+\thead{سبک\\استناددهی} & \thead{شیوه‌ی\\استناددهی} & \thead{شیوه‌ی مرتب‌سازی} & \thead{نمونه استناد\\درون متنی}\\
+\hline
+\م‌ل{\tt iranlatin} & پدیدآورنده-سال & نام پدیدآورندگان & \م‌ل{(Sanchez 2016)}\\
+\م‌ل{\tt iranlatin-plain} & شماره‌گذاری & نام پدیدآورندگان & \م‌ل{[1]}\\
+\م‌ل{\tt iranlatin-year} & پدیدآورنده-سال & سال اثر & \م‌ل{(Sanchez 2016)}\\
+\م‌ل{\tt iranlatin-plainyr} & شماره‌گذاری & سال اثر & \م‌ل{[1]}\\
+\م‌ل{\tt iranlatin-unsrt} & شماره‌گذاری & استناد در متن & \م‌ل{[1]}\\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+
+
+\subsection{فرمانهای استناد}
+از آن‌جایی این بسته با بسته‌ی \م‌ل{\sffamily natbib} کار میکند، همه‌ی فرمانهای استناد  بسته‌ی \م‌ل{\sffamily natbib} در دسترس هستند. استناد به دو شکل میتواند باشد: پرانتزی، و متنی. در استناد پرانتزی، نام پدیدآورندگان و سال اثر (یا شماره‌ی استناد) بین پرانتز (یا براکت) قرار میگیرد. در استناد متنی نام پدیدآورندگان نوشته شده سپس سال اثر (یا شماره‌ی استناد) بین پرانتز (یا براکت) قرار میگیرد. در ادامه سه فرمان پرکاربرد از فرمانهای استناد به همراهی مثالی در سبک استناددهی \م‌ل{\tt iran} ارائه شده است.
+
+
+\paragraph*{فرمان \lr{\tt \textbackslash cite} (استناد پرانتزی)}~\\[0.5\baselineskip]
+\begin{tabular}{ccc}
+(کیانی و همکاران ۱۳۹۵) &$\Rightarrow$& \lr{\tt \textbackslash cite\{key\}}\\
+(کیانی و همکاران ۱۳۹۵، فصل~۲) &$\Rightarrow$& \lr{\tt \textbackslash cite\rl{[فصل~۲]}\{key\}}\\
+(ببینید کیانی و همکاران ۱۳۹۵، ص.~۱۰) &$\Rightarrow$& \lr{\tt \textbackslash cite\rl{[ص.~۱۰][ببینید]}\{key\}}\\
+(کیانی، صفایی، رفیعی، و امانی ۱۳۹۵) &$\Rightarrow$& \lr{\tt \textbackslash cite*\{key\}}\\
+(کیانی، صفایی، رفیعی، و امانی ۱۳۹۵، فصل~۲) &$\Rightarrow$& \lr{\tt \textbackslash cite*\rl{[فصل~۲]}\{key\}}\\
+(ببینید کیانی، صفایی، رفیعی، و امانی ۱۳۹۵، ص.~۱۰) &$\Rightarrow$& \lr{\tt \textbackslash cite*\rl{[ص.~۱۰][ببینید]}\{key\}}\\
+\end{tabular}
+
+
+
+\paragraph*{فرمان \lr{\tt \textbackslash citep} (استناد پرانتزی)}~\\[0.5\baselineskip]
+\begin{tabular}{ccc}
+(کیانی و همکاران ۱۳۹۵) &$\Rightarrow$& \lr{\tt \textbackslash citep\{key\}}\\
+(کیانی و همکاران ۱۳۹۵، فصل~۲) &$\Rightarrow$& \lr{\tt \textbackslash citep\rl{[فصل~۲]}\{key\}}\\
+(ببینید کیانی و همکاران ۱۳۹۵، ص.~۱۰) &$\Rightarrow$& \lr{\tt \textbackslash citep\rl{[ص.~۱۰][ببینید]}\{key\}}\\
+(کیانی، صفایی، رفیعی، و امانی ۱۳۹۵) &$\Rightarrow$& \lr{\tt \textbackslash citep*\{key\}}\\
+(کیانی، صفایی، رفیعی، و امانی ۱۳۹۵، فصل~۲) &$\Rightarrow$& \lr{\tt \textbackslash citep*\rl{[فصل~۲]}\{key\}}\\
+(ببینید کیانی، صفایی، رفیعی، و امانی ۱۳۹۵، ص.~۱۰) &$\Rightarrow$& \lr{\tt \textbackslash citep*\rl{[ص.~۱۰][ببینید]}\{key\}}\\
+\end{tabular}
+
+
+
+\newpage
+\paragraph*{فرمان \lr{\tt \textbackslash citet} (استناد متنی)}~\\[0.5\baselineskip]
+\begin{tabular}{ccc}
+کیانی و همکاران (۱۳۹۵) &$\Rightarrow$& \lr{\tt \textbackslash citet\{key\}}\\
+کیانی و همکاران (۱۳۹۵، فصل~۲) &$\Rightarrow$& \lr{\tt \textbackslash citet\rl{[فصل~۲]}\{key\}}\\
+کیانی و همکاران (ببینید ۱۳۹۵، ص.~۱۰) &$\Rightarrow$& \lr{\tt \textbackslash citet\rl{[ص.~۱۰][ببینید]}\{key\}}\\
+کیانی، صفایی، رفیعی، و امانی (۱۳۹۵) &$\Rightarrow$& \lr{\tt \textbackslash citet*\{key\}}\\
+کیانی، صفایی، رفیعی، و امانی (۱۳۹۵، فصل~۲) &$\Rightarrow$& \lr{\tt \textbackslash citet*\rl{[فصل~۲]}\{key\}}\\
+کیانی، صفایی، رفیعی، و امانی (ببینید ۱۳۹۵، ص.~۱۰) &$\Rightarrow$& \lr{\tt \textbackslash citet*\rl{[ص.~۱۰][ببینید]}\{key\}}\\
+\end{tabular}
+
+
+
+\section{آماده‌سازی پایگاه داده مرجعها}
+پرونده‌ی \م‌ل{\tt *.bib} که دربردارنده‌ی مشخصات مرجعها است باید با رمزینه‌ی \م‌ل{\tt utf8} ذخیره شده باشد. مدخلهای\زیرنویس‌لاتین{entry} سازگار شده با شیوه‌نامه‌ی ایران در این بسته عبارتند از:
+\begin{center}
+\begin{tabular}{*{3}{>{\centering\arraybackslash}p{0.3\linewidth}}}
+\lr{\tt @book} & \lr{\tt @incollection} & \lr{\tt @article}\\
+\lr{\tt @proceedings} & \lr{\tt @inproceedings} & \lr{\tt @conference}\\
+\lr{\tt @masterthesis} & \lr{\tt @phdtesis} & \lr{\tt @unpublished}\\
+\lr{\tt @misc} & & 
+\end{tabular}
+\end{center}
+دیگر نوع مدخلها که عبارتند از \م‌ل{\tt @booklet}، \م‌ل{\tt @inbook}، \م‌ل{\tt @manual}، و \م‌ل{\tt @techreport} با شیوه‌نامه‌ی ایران سازگار نشده‌اند و پیش‌نهاد میشود که از آنها استفاده نشود.
+
+
+برای اطلاع از الگوی چیدمان مشخصه‌ها\زیرنویس‌لاتین{field}، و مشخصه‌های مورد استفاده برای هر مدخل در فهرست‌نویسی منبعها، و مرجعها، پرونده‌ی
+\م‌ل{\tt iran-bibtex-pattern.pdf} را ببینید.
+
+
+
+
+
+
+\subsection{مشخصه‌ی \lr{\tt language}}
+در این بسته، از مشخصه‌ی \م‌ل{\tt language} برای تعیین حروف‌چینی آن مرجع در فهرست مرجعها، و منبعها استفاده میشود. برای آن‌که مرجعی که به زبان فارسی است از راست به چپ حروف‌چینی شود، باید مشخصه‌ی \م‌ل{\tt language} آن مرجع برابر با \م‌ل{\tt persian} وارد گردد\زیرنویس{این مشخصه به بزرگی یا کوچکی حرفها حساس نیست}؛ در غیر این صورت، آن مرجع به عنوان مرجعی غیرفارسی فهرست شده و حروف‌چینی میگردد.
+
+
+\subsection{مشخصه‌ی \lr{\tt authorfa}}
+در یک نوشتار فارسی که از سبک استناددهی پدیدآورنده-سال استفاده میشود، پیش‌نهاد میگردد که نام پدیدآورندگان اثرهای غیرفارسی در متن به فارسی نوشته شود. از این رو، با توجه به آن‌که آن اثر قرار است زیر نام چه کسانی مرتب شود، نام آنها در مشخصه‌ی \م‌ل{\tt authorfa} وارد شود.
+
+
+
+\section{مثالهای استفاده از این بسته}
+شمار زیادی از مثالهای ارائه شده در شیوه‌نامه‌ی ایران با استفاده از این بسته پیاده‌سازی شده‌اند. این مثالها در مخزن گیت‌هاب این بسته به نشانی
+\href{https://github.com/farshadrasuli/iran-bibtex}{github.com/farshadrasuli/iran-bibtex}
+در پوشه‌ی \م‌ل{examples} در دسترس هستند. این مثالها میتوانند راهنمای بسیار خوبی برای یادگیری این بسته در استفاده از شیوه‌نامه‌ی ایران باشند.
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

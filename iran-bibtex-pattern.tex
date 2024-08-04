@@ -1,0 +1,681 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\usepackage[localise,perpagefootnote=on,computeautoilg=on]{xepersian}
+\settextfont{Parsi Nevis}
+\setpersianmonofont{Vazir Code}
+\setlatintextfont{Parsi Nevis}
+
+\SepMark{-}
+
+\setcounter{tocdepth}{1}
+
+
+
+
+\begin{document}
+\title{خلاصه‌ای از الگوی چیدمان مشخصه‌ها در فهرست‌نویسی منبعها به شیوه‌ی استناددهی ایران}
+\author{فرشاد رسولی\thanks{رایانامه: \url{farshad.rasuli@gmail.com}}}
+\date{نسخه‌ی ۰٫۴٫۳ --- ۱۴ اَمُرداد ۱۴۰۳}
+\maketitle
+
+
+\begin{description}
+\item[مدخل (\lr{entry}):]
+به هر اثری که اطلاعات شناسنامه‌ای آن برای استناددهی  در نوشتار وارد میگردد گفته میشود. مدخل میتواند از نوع \verb|@book|، \verb|@incollection|، \verb|@article|، \verb|@inproceeding|، \verb|@masterthesis|، \verb|@phdthesis|، \verb|@misc| باشد.
+\item[مشخصه (\lr{field}):]
+به هر یک از مشخصه‌های شناسنامه‌ای مدخل مانند \lr{\tt author}، \lr{\tt title}، \lr{\tt year} گفته میشود.
+\end{description}
+
+
+
+\renewcommand{\contentsname}{فهرست}
+\tableofcontents
+
+
+
+
+
+
+
+
+
+
+\section{کتاب}
+برای استناد به کل یک کتاب از مدخل \verb|@book| استفاده کنید. الگوی چیدمان مشخصه‌های مدخل کتاب در ادامه ارائه شده است.
+
+
+
+
+
+\subsection{کتابهایی که زیر نام نویسنده مرتب میشوند}
+اگر برای مدخل کتاب، مشخصه‌ی \verb|author| وارد گردد، زیر نام نویسنده مرتب میشود.
+
+\begin{itemize}[nosep]
+\begin{latin}
+\item[] []
+{\tt author}. {\tt year}. {\tt title}. {\tt edition} edn. {\tt impression} imp. {\tt comment}. by {\tt by}. Translated by {\tt translator}. {\tt translateyear}. {\tt volume volumes series number}. In collaboration with {\tt collaboration}. Commented by \\{\tt commentator}. Compiled by {\tt compiler}. Edited by {\tt editor}. Introduction by {\tt introduction}. Preface by {\tt preface}. Afterwords by {\tt afterword}. {\tt address: publisher}. {\tt note}. ISBN: {\tt isbn}. DOI: {\tt doi}. Retrieved {\tt urldate}. URL: {\tt url}. 
+\end{latin}
+
+\item[] []
+{\persianttfamily نویسنده}. {\persianttfamily تاریخ}. {\persianttfamily عنوان}. ویرایش {\persianttfamily …}. چاپ {\persianttfamily …}. {\persianttfamily توضیح}. نوشته‌ی {\persianttfamily …}. ترجمه‌ی {\persianttfamily …}. {\persianttfamily تاریخ ترجمه}. {\persianttfamily جلد، جلدها، فروست، شماره}. با همکاری {\persianttfamily …}. با یادداشت {\persianttfamily …}. گردآوری {\persianttfamily …}. ویراسته‌ی {\persianttfamily …}. با مقدمه‌ی {\persianttfamily …}. با پیش‌گفتار {\persianttfamily …}. با پس‌گفتار {\persianttfamily …}. {\persianttfamily محل نشر: ناشر}. {\persianttfamily یادداشت}. شابک: {\persianttfamily …}. شناسه‌ی دیجیتال: {\persianttfamily …}. دسترسی در {\persianttfamily …}. تارنما: {\persianttfamily …}. 
+\end{itemize}
+
+
+
+
+
+\subsection{کتابهایی که زیر نام گردآورده مرتب میشوند}
+اگر برای مدخل کتاب، مشخصه‌ی \verb|author| وارد نشود، در صورت وجود مشخصه‌ی \verb|compiler|، زیر نام گردآونده مرتب میشود.
+
+\begin{itemize}[nosep]
+\begin{latin}
+\item[] []
+{\tt compiler}, comp(s). {\tt year}. {\tt title}. {\tt edition} edn. {\tt impression} imp. {\tt comment}. by {\tt by}. Translated by {\tt translator}. {\tt translateyear}. {\tt volume volumes series number}. In collaboration with {\tt collaboration}. Commented by {\tt commentator}. Edited by {\tt editor}. Introduction by {\tt introduction}. Preface by {\tt preface}. Afterwords by {\tt afterword}. {\tt address: publisher}. {\tt note}. ISBN: {\tt isbn}. DOI: {\tt doi}. Retrieved {\tt urldate}. URL: {\tt url}. 
+\end{latin}
+
+\item[] []
+{\persianttfamily گردآورنده}، گردآورنده‌‌‌‌(گان). {\persianttfamily تاریخ}. {\persianttfamily عنوان}. ویرایش {\persianttfamily …}. چاپ {\persianttfamily …}. {\persianttfamily توضیح}. نوشته‌ی {\persianttfamily …}. ترجمه‌ی {\persianttfamily …}. {\persianttfamily تاریخ ترجمه}. {\persianttfamily جلد، جلدها، فروست، شماره}. با همکاری {\persianttfamily …}. با یادداشت {\persianttfamily …}. ویراسته‌ی {\persianttfamily …}. با مقدمه‌ی {\persianttfamily …}. با پیش‌گفتار {\persianttfamily …}. با پس‌گفتار {\persianttfamily …}. {\persianttfamily محل نشر: ناشر}. {\persianttfamily یادداشت}. شابک: {\persianttfamily …}. شناسه‌ی دیجیتال: {\persianttfamily …}. دسترسی در {\persianttfamily …}. تارنما: {\persianttfamily …}.
+\end{itemize}
+
+
+
+
+
+\subsection{کتابهایی که زیر نام ویراستار مرتب میشوند}
+اگر برای مدخل کتاب، مشخصه‌های \verb|author|، و \verb|compiler| وارد نشوند، در صورت وجود مشخصه‌ی \verb|editor|، زیر نام ویراستار مرتب میشود.
+
+\begin{itemize}[nosep]
+\begin{latin}
+\item[] []
+{\tt editor}, ed(s). {\tt year}. {\tt title}. {\tt edition} edn. {\tt impression} imp. {\tt comment}. by {\tt by}. Translated by {\tt translator}. {\tt translateyear}. {\tt volume volumes series number}. In collaboration with {\tt collaboration}. Commented by \\{\tt commentator}. Introduction by {\tt introduction}. Preface by {\tt preface}. Afterwords by {\tt afterword}. {\tt address: publisher}. {\tt note}. ISBN: {\tt isbn}. DOI: {\tt doi}. Retrieved {\tt urldate}. URL: {\tt url}. 
+\end{latin}
+
+\item[] []
+{\persianttfamily ویراستار}، ویراستار(ان). {\persianttfamily تاریخ}. {\persianttfamily عنوان}. ویرایش {\persianttfamily …}. چاپ {\persianttfamily …}. {\persianttfamily توضیح}. نوشته‌ی {\persianttfamily …}. ترجمه‌ی {\persianttfamily …}. {\persianttfamily تاریخ ترجمه}. {\persianttfamily جلد، جلدها، فروست، شماره}. با همکاری {\persianttfamily …}. با یادداشت {\persianttfamily …}. ویراسته‌ی {\persianttfamily …}. با مقدمه‌ی {\persianttfamily …}. با پیش‌گفتار {\persianttfamily …}. با پس‌گفتار {\persianttfamily …}. {\persianttfamily محل نشر: ناشر}. {\persianttfamily یادداشت}. شابک: {\persianttfamily …}. شناسه‌ی دیجیتال: {\persianttfamily …}. دسترسی در {\persianttfamily …}. تارنما: {\persianttfamily …}.
+\end{itemize}
+
+
+
+
+
+\subsection{کتابهایی که زیر نام مترجم مرتب میشوند}
+اگر برای مدخل کتاب، مشخصه‌های \verb|author|، \verb|compiler|، و \verb|editor| وارد نشوند، در صورت وجود مشخصه‌ی \verb|translator|، زیر نام مترجم مرتب میشود.
+
+\begin{itemize}[nosep]
+\begin{latin}
+\item[] []
+{\tt translator}, tran(s). {\tt translateyear}. {\tt title}. {\tt edition} edn. {\tt impression} imp. {\tt comment}. by {\tt by}. {\tt year}. {\tt volume volumes series number}. In collaboration with {\tt collaboration}. Commented by {\tt commentator}. Introduction by {\tt introduction}. Preface by {\tt preface}. Afterwords by {\tt afterword}. {\tt address: publisher}. {\tt note}. ISBN: {\tt isbn}. DOI: {\tt doi}. Retrieved {\tt urldate}. URL: {\tt url}. 
+\end{latin}
+
+\item[] []
+{\persianttfamily مترجم}، مترجم(‍ان). {\persianttfamily تاریخ ترجمه}. {\persianttfamily عنوان}. ویرایش {\persianttfamily …}. چاپ {\persianttfamily …}. {\persianttfamily توضیح}. نوشته‌ی {\persianttfamily …}. {\persianttfamily تاریخ}. {\persianttfamily جلد، جلدها، فروست، شماره}. با همکاری {\persianttfamily …}. با یادداشت {\persianttfamily …}. ویراسته‌ی {\persianttfamily …}. با مقدمه‌ی {\persianttfamily …}. با پیش‌گفتار {\persianttfamily …}. با پس‌گفتار {\persianttfamily …}. {\persianttfamily محل نشر: ناشر}. {\persianttfamily یادداشت}. شابک: {\persianttfamily …}. شناسه‌ی دیجیتال: {\persianttfamily …}. دسترسی در {\persianttfamily …}. تارنما: {\persianttfamily …}.
+\end{itemize}
+
+
+
+
+
+\subsection{کتابهایی که زیر عنوان مرتب میشوند}
+اگر برای مدخل کتاب، مشخصه‌های \verb|author|، \verb|compiler|، \verb|editor|، و \verb|translator| وارد نشوند، باید مشخصه‌ی \verb|key| آن مدخل برابر با مشخصه‌ی \verb|title| وارد شود که زیر عنوان مرتب گردد.
+
+\begin{itemize}[nosep]
+\begin{latin}
+\item[] []
+{\tt title}. {\tt year}. {\tt edition} edn. {\tt impression} imp. {\tt comment}. by {\tt by}. {\tt volume volumes series number}. In collaboration with {\tt collaboration}. Commented by {\tt commentator}. Introduction by {\tt introduction}. Preface by {\tt preface}. Afterwords by {\tt afterword}. {\tt address: publisher}. {\tt note}. ISBN: {\tt isbn}. DOI: {\tt doi}. Retrieved {\tt urldate}. URL: {\tt url}. 
+\end{latin}
+
+\item[] []
+{\persianttfamily عنوان}. {\persianttfamily تاریخ}. ویرایش {\persianttfamily …}. چاپ {\persianttfamily …}. {\persianttfamily توضیح}. نوشته‌ی {\persianttfamily …}. {\persianttfamily جلد، جلدها، فروست، شماره}. با همکاری {\persianttfamily …}. با یادداشت {\persianttfamily …}. ویراسته‌ی {\persianttfamily …}. با مقدمه‌ی {\persianttfamily …}. با پیش‌گفتار {\persianttfamily …}. با پس‌گفتار {\persianttfamily …}. {\persianttfamily محل نشر: ناشر}. {\persianttfamily یادداشت}. شابک: {\persianttfamily …}. شناسه‌ی دیجیتال: {\persianttfamily …}. دسترسی در {\persianttfamily …}. تارنما: {\persianttfamily …}.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+\section{پاره‌ای از یک کتاب}
+برای استناد به فصلی از کتاب، یا بخشی از یک کتاب که عنوان مشخصی دارد از مدخل \verb|@incollection| استفاده کنید. الگوی چیدمان مشخصه‌های مدخل \verb|@incollection| در ادامه ارائه شده است.
+
+
+
+
+
+\subsection{پاره‌ای از کتاب که زیر نام نویسنده مرتب میشود}
+اگر برای مدخل \verb|@incollection|، مشخصه‌ی \verb|author| وارد گردد، زیر نام نویسنده مرتب میشود.
+
+\begin{itemize}[nosep]
+\begin{latin}
+\item[] []
+{\tt author}. {\tt year}. {\tt title}. {\tt comment}. by {\tt by}. {\tt chapter, booktitle, pages, volume, volumes}. {\tt edition} edn. {\tt impression} imp. Translated by {\tt translator}. {\tt translateyear}. {\tt series number}. Compiled by {\tt compiler}. Edited by {\tt editor}. {\tt address: publisher}. {\tt note}. ISBN: {\tt isbn}. DOI: {\tt doi}. Retrieved {\tt urldate}. URL: {\tt url}. 
+\end{latin}
+
+\item[] []
+{\persianttfamily نویسنده}. {\persianttfamily تاریخ}. {\persianttfamily عنوان}. {\persianttfamily توضیح}. نوشته‌ی {\persianttfamily …}. {\persianttfamily فصل، عنوان‌کتاب، صفحه‌ها، جلد، جلدها}. ویرایش {\persianttfamily …}. چاپ {\persianttfamily …}. ترجمه‌ی {\persianttfamily …}. {\persianttfamily تاریخ ترجمه}. {\persianttfamily فروست، شماره}. گردآوری {\persianttfamily …}. ویراسته‌ی {\persianttfamily …}. {\persianttfamily محل نشر: ناشر}. {\persianttfamily یادداشت}. شابک: {\persianttfamily …}. شناسه‌ی دیجیتال: {\persianttfamily …}. دسترسی در {\persianttfamily …}. تارنما: {\persianttfamily …}. 
+\end{itemize}
+
+
+
+
+
+\subsection{پاره‌ای از کتاب که زیر نام گردآورنده مرتب میشود}
+اگر برای مدخل \verb|@incollection|، مشخصه‌ی \verb|author| وارد نشود، در صورت وجود مشخصه‌ی \verb|compiler| زیر نام گردآورنده مرتب میشود.
+
+\begin{itemize}[nosep]
+\begin{latin}
+\item[] []
+{\tt compiler}, comp(s). {\tt year}. {\tt title}. {\tt comment}. by {\tt by}. {\tt chapter, booktitle, pages, volume, volumes}. {\tt edition} edn. {\tt impression} imp. Translated by {\tt translator}. {\tt translateyear}. {\tt series number}. Edited by {\tt editor}. {\tt address: publisher}. {\tt note}. ISBN: {\tt isbn}. DOI: {\tt doi}. Retrieved {\tt urldate}. URL: {\tt url}. 
+\end{latin}
+
+\item[] []
+{\persianttfamily گردآورنده}، گردآورنده(گان). {\persianttfamily تاریخ}. {\persianttfamily عنوان}. {\persianttfamily توضیح}. نوشته‌ی {\persianttfamily …}. {\persianttfamily فصل، عنوان‌کتاب، صفحه‌ها، جلد، جلدها}. ویرایش {\persianttfamily …}. چاپ {\persianttfamily …}. ترجمه‌ی {\persianttfamily …}. {\persianttfamily تاریخ ترجمه}. {\persianttfamily فروست، شماره}. ویراسته‌ی {\persianttfamily …}. {\persianttfamily محل نشر: ناشر}. {\persianttfamily یادداشت}. شابک: {\persianttfamily …}. شناسه‌ی دیجیتال: {\persianttfamily …}. دسترسی در {\persianttfamily …}. تارنما: {\persianttfamily …}. 
+\end{itemize}
+
+
+
+
+
+\subsection{پاره‌ای از کتاب که زیر نام ویراستار مرتب میشود}
+اگر برای مدخل \verb|@incollection|، مشخصه‌های \verb|author|، و \verb|compiler| وارد نشود، در صورت وجود مشخصه‌ی \verb|editor| زیر نام گردآورنده مرتب میشود.
+
+\begin{itemize}[nosep]
+\begin{latin}
+\item[] []
+{\tt editor}, ed(s). {\tt year}. {\tt title}. {\tt comment}. by {\tt by}. {\tt chapter, booktitle, pages, volume, volumes}. {\tt edition} edn. {\tt impression} imp. Translated by {\tt translator}. {\tt translateyear}. {\tt series number}. {\tt address: publisher}. {\tt note}. ISBN: {\tt isbn}. DOI: {\tt doi}. Retrieved {\tt urldate}. URL: {\tt url}. 
+\end{latin}
+
+\item[] []
+{\persianttfamily ویراستار}، ویراستار(ان). {\persianttfamily تاریخ}. {\persianttfamily عنوان}. {\persianttfamily توضیح}. نوشته‌ی {\persianttfamily …}. {\persianttfamily فصل، عنوان‌کتاب، صفحه‌ها، جلد، جلدها}. ویرایش {\persianttfamily …}. چاپ {\persianttfamily …}. ترجمه‌ی {\persianttfamily …}. {\persianttfamily تاریخ ترجمه}. {\persianttfamily فروست، شماره}. {\persianttfamily محل نشر: ناشر}. {\persianttfamily یادداشت}. شابک: {\persianttfamily …}. شناسه‌ی دیجیتال: {\persianttfamily …}. دسترسی در {\persianttfamily …}. تارنما: {\persianttfamily …}. 
+\end{itemize}
+
+
+
+
+
+\subsection{پاره‌ای از کتاب که زیر نام مترجم مرتب میشود}
+اگر برای مدخل \verb|@incollection|، مشخصه‌های \verb|author|، \verb|compiler|، و \verb|editor| وارد نشود، در صورت وجود مشخصه‌ی \verb|translator|، زیر نام مترجم مرتب میشود.
+
+\begin{itemize}[nosep]
+\begin{latin}
+\item[] []
+{\tt translator}, trans. {\tt translateyear}. {\tt title}. {\tt comment}. by {\tt by}. {\tt year}. {\tt chapter, booktitle, pages, volume, volumes}. {\tt edition} edn. \\{\tt impression} imp. {\tt series number}. Compiled by {\tt compiler}. Edited by {\tt editor}. {\tt address: publisher}. {\tt note}. ISBN: {\tt isbn}. DOI: {\tt doi}. Retrieved {\tt urldate}. URL: {\tt url}. 
+\end{latin}
+
+\item[] []
+{\persianttfamily مترجم}، مترجم(‍ان). {\persianttfamily تاریخ ترجمه}. {\persianttfamily عنوان}. {\persianttfamily توضیح}. نوشته‌ی {\persianttfamily …}. {\persianttfamily تاریخ}. {\persianttfamily فصل، عنوان‌کتاب، صفحه‌ها، جلد، جلدها}. ویرایش {\persianttfamily …}. چاپ {\persianttfamily …}. {\persianttfamily فروست، شماره}. گردآوری {\persianttfamily …}. ویراسته‌ی {\persianttfamily …}. {\persianttfamily محل نشر: ناشر}. {\persianttfamily یادداشت}. شابک: {\persianttfamily …}. شناسه‌ی دیجیتال: {\persianttfamily …}. دسترسی در {\persianttfamily …}. تارنما: {\persianttfamily …}. 
+\end{itemize}
+
+
+
+
+
+\subsection{پاره‌ای از کتاب که زیر عنوان مرتب میشود}
+اگر برای مدخل \verb|@incollection|، مشخصه‌های \verb|author|، و \verb|translator| وارد نشوند، باید مشخصه‌ی \verb|key| آن مدخل برابر با مشخصه‌ی \verb|title| وارد شود که زیر عنوان مرتب گردد.
+
+\begin{itemize}[nosep]
+\begin{latin}
+\item[] []
+{\tt title}. {\tt year}. {\tt comment}. by {\tt by}. {\tt chapter, booktitle, pages, volume, volumes}. {\tt edition} edn. {\tt impression} imp. {\tt series number}. Compiled by {\tt compiler}. Edited by {\tt editor}. {\tt address: publisher}. {\tt note}. ISBN: {\tt isbn}. DOI: {\tt doi}. Retrieved {\tt urldate}. URL: {\tt url}. 
+\end{latin}
+
+\item[] []
+{\persianttfamily عنوان}. {\persianttfamily تاریخ}. {\persianttfamily توضیح}. نوشته‌ی {\persianttfamily …}. {\persianttfamily فصل، عنوان‌کتاب، صفحه‌ها، جلد، جلدها}. ویرایش {\persianttfamily …}. چاپ {\persianttfamily …}. {\persianttfamily فروست، شماره}. گردآوری {\persianttfamily …}. ویراسته‌ی {\persianttfamily …}. {\persianttfamily محل نشر: ناشر}. {\persianttfamily یادداشت}. شابک: {\persianttfamily …}. شناسه‌ی دیجیتال: {\persianttfamily …}. دسترسی در {\persianttfamily …}. تارنما: {\persianttfamily …}. 
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+\section{مقاله در مجله‌ی تخصصی}
+برای استناد به یک مقاله‌ی چاپ شده در مجله‌ی تخصصی از مدخل \verb|@article| استفاده کنید. الگوی چیدمان مشخصه‌های مدخل مقاله در ادامه ارائه شده است.
+
+
+
+
+
+\subsection{مقاله‌هایی که زیر نام نویسنده مرتب میشوند}
+اگر برای مدخل مقاله، مشخصه‌ی \verb|author| وارد گردد، زیر نام نویسنده مرتب میشود.
+
+\begin{itemize}[nosep]
+\begin{latin}
+\item[] []
+{\tt author}. {\tt year}. {\tt title}. {\tt comment}. by {\tt by}. Translated by {\tt translator}. {\tt translateyear}. Edited by {\tt editor}. {\tt journal, issue, volume, number, pages}. {\tt note}. ISSN: {\tt issn}. DOI: {\tt doi}. Retrieved {\tt urldate}. URL: {\tt url}. 
+\end{latin}
+
+\item[] []
+{\persianttfamily نویسنده}. {\persianttfamily تاریخ}. {\persianttfamily عنوان}. {\persianttfamily توضیح}. نوشته‌ی {\persianttfamily …}. ترجمه‌ی {\persianttfamily …}. {\persianttfamily تاریخ ترجمه}. ویراسته‌ی {\persianttfamily …}. {\persianttfamily مجله، ویژه‌نامه، دوره، شماره، صفحه‌ها}. {\persianttfamily یادداشت}. شاپا: {\persianttfamily …}. شناسه‌ی دیجیتال: {\persianttfamily …}. دسترسی در {\persianttfamily …}. تارنما: {\persianttfamily …}. 
+\end{itemize}
+
+
+
+
+
+\subsection{مقاله‌هایی که زیر نام ویراستار مرتب میشوند}
+اگر برای مدخل مقاله، مشخصه‌های \verb|author| وارد نشود، در صورت وجود مشخصه‌ی \verb|editor|، زیر نام ویراستار مرتب میشود.
+
+\begin{itemize}[nosep]
+\begin{latin}
+\item[] []
+{\tt editor}, ed(s). {\tt year}. {\tt title}. {\tt comment}. by {\tt by}. {\tt journal, issue, volume, number, pages}. {\tt note}. ISSN: {\tt issn}. DOI: {\tt doi}. Retrieved {\tt urldate}. URL: {\tt url}. 
+\end{latin}
+
+\item[] []
+{\persianttfamily ویراستار}، ویراستار(ان). {\persianttfamily تاریخ}. {\persianttfamily عنوان}. {\persianttfamily توضیح}. نوشته‌ی {\persianttfamily …}. ویراسته‌ی {\persianttfamily …}. {\persianttfamily مجله، ویژه‌نامه، دوره، شماره، صفحه‌ها}. {\persianttfamily یادداشت}. شاپا: {\persianttfamily …}. شناسه‌ی دیجیتال: {\persianttfamily …}. دسترسی در {\persianttfamily …}. تارنما: {\persianttfamily …}. 
+\end{itemize}
+
+
+
+
+
+\subsection{مقاله‌هایی که زیر نام مترجم مرتب میشوند}
+اگر برای مدخل مقاله، مشخصه‌های \verb|author|، و \verb|editor| وارد نشوند، در صورت وجود مشخصه‌ی \verb|translator|، زیر نام مترجم مرتب میشود.
+
+\begin{itemize}[nosep]
+\begin{latin}
+\item[] []
+{\tt translator}, trans. {\tt translateyear}. {\tt comment}. {\tt title}. by {\tt by}. {\tt year}. {\tt journal, issue, volume, number, pages}. {\tt note}. ISSN: {\tt issn}. DOI: {\tt doi}. Retrieved {\tt urldate}. URL: {\tt url}. 
+\end{latin}
+
+\item[] []
+{\persianttfamily مترجم}، مترجم(‍ان). {\persianttfamily تاریخ ترجمه}. {\persianttfamily عنوان}. {\persianttfamily توضیح}. نوشته‌ی {\persianttfamily …}. {\persianttfamily تاریخ}. {\persianttfamily مجله، ویژه‌نامه، دوره، شماره، صفحه‌ها}. {\persianttfamily یادداشت}. شاپا: {\persianttfamily …}. شناسه‌ی دیجیتال: {\persianttfamily …}. دسترسی در {\persianttfamily …}. تارنما: {\persianttfamily …}. 
+\end{itemize}
+
+
+
+
+
+\subsection{مقاله‌هایی که زیر نام مجله مرتب میشوند}
+اگر برای مدخل مقاله، مشخصه‌های \verb|author|، \verb|editor|، و \verb|translator| وارد نشوند، باید مشخصه‌ی \verb|key| آن مدخل برابر با مشخصه‌ی \verb|journal| وارد شود که زیر نام مجله مرتب گردد.
+
+\begin{itemize}[nosep]
+\begin{latin}
+\item[] []
+{\tt journal}. {\tt year}. {\tt title}. {\tt comment}. by {\tt by}. Edited by {\tt editor}. {\tt issue, volume, number, pages}. {\tt note}. ISSN: {\tt issn}. DOI: {\tt doi}. Retrieved {\tt urldate}. URL: {\tt url}. 
+\end{latin}
+
+\item[] []
+{\persianttfamily مجله}. {\persianttfamily تاریخ}. {\persianttfamily توضیح}. نوشته‌ی {\persianttfamily …}. ویراسته‌ی {\persianttfamily …}. {\persianttfamily ویژه‌نامه، دوره، شماره، صفحه‌ها}. {\persianttfamily یادداشت}. شاپا: {\persianttfamily …}. شناسه‌ی دیجیتال: {\persianttfamily …}. دسترسی در {\persianttfamily …}. تارنما: {\persianttfamily …}. 
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+\section{مجموعه‌ی مقاله‌های یک همایش}
+برای استناد به کتابی که دربردارنده‌ی مقاله‌های یک همایش است، از مدخل \verb|@proceedings| استفاده کنید. الگوی چیدمان مشخصه‌های مدخل \verb|@proceedings| در ادامه ارائه شده است.
+
+
+
+
+
+\subsection{مجموعه مقاله‌ای که زیر نام ویراستار مرتب میشود}
+اگر برای مدخل \verb|@proceedings|، مشخصه‌ی \verb|editor| وارد گردد، زیر نام ویراستار مرتب میشود.
+
+\begin{itemize}[nosep]
+\begin{latin}
+\item[] []
+{\tt editor}, ed(s). {\tt year}. {\tt title}. {\tt edition} edn. {\tt impression} imp. Translated by {\tt translator}. {\tt translateyear}. {\tt volume volumes series number}. Compiled by {\tt compiler}. {\tt organization}. {\tt address: publisher}. {\tt note}. ISBN: {\tt isbn}. ISSN: {\tt issn}. DOI: {\tt doi}. Retrieved {\tt urldate}. URL: {\tt url}. 
+\end{latin}
+
+\item[] []
+{\persianttfamily ویراستار}، ویراستار(ان). {\persianttfamily تاریخ}. {\persianttfamily عنوان}. ویرایش {\persianttfamily …}. چاپ {\persianttfamily …}. ترجمه‌ی {\persianttfamily …}. {\persianttfamily تاریخ ترجمه}. {\persianttfamily جلد، جلدها، فروست، شماره}. گردآوری {\persianttfamily …}. {\persianttfamily سازمان}. {\persianttfamily محل نشر: ناشر}. {\persianttfamily یادداشت}. شابک: {\persianttfamily …}. شاپا: {\persianttfamily …}. شناسه‌ی دیجیتال: {\persianttfamily …}. دسترسی در {\persianttfamily …}. تارنما: {\persianttfamily …}. 
+\end{itemize}
+
+
+
+
+
+\subsection{مجموعه مقاله‌ای که زیر نام گردآورنده مرتب میشود}
+اگر برای مدخل \verb|@proceedings|، مشخصه‌ی \verb|editor| وارد نشود، در صورت وجود مشخصه‌ی \verb|compiler| زیر نام گردآورنده مرتب میشود.
+
+\begin{itemize}[nosep]
+\begin{latin}
+\item[] []
+{\tt compiler}, comp(s). {\tt year}. {\tt title}. {\tt edition} edn. {\tt impression} imp. Translated by {\tt translator}. {\tt translateyear}. {\tt volume volumes series number}. {\tt organization}. {\tt address: publisher}. {\tt note}. ISBN: {\tt isbn}. ISSN: {\tt issn}. DOI: {\tt doi}. Retrieved {\tt urldate}. URL: {\tt url}. 
+\end{latin}
+
+\item[] []
+{\persianttfamily گردآورنده}، گردآورنده(گان). {\persianttfamily تاریخ}. {\persianttfamily عنوان}. ویرایش {\persianttfamily …}. چاپ {\persianttfamily …}. ترجمه‌ی {\persianttfamily …}. {\persianttfamily تاریخ ترجمه}. {\persianttfamily جلد، جلدها، فروست، شماره}. {\persianttfamily سازمان}. {\persianttfamily محل نشر: ناشر}. {\persianttfamily یادداشت}. شابک: {\persianttfamily …}. شاپا: {\persianttfamily …}. شناسه‌ی دیجیتال: {\persianttfamily …}. دسترسی در {\persianttfamily …}. تارنما: {\persianttfamily …}. 
+\end{itemize}
+
+
+
+
+
+\subsection{مجموعه مقاله‌ای که زیر نام مترجم مرتب میشوند}
+اگر برای مدخل \verb|@proceedings|، مشخصه‌های \verb|editor|، و \verb|compiler| وارد نشوند، در صورت وجود مشخصه‌ی \verb|translator|، زیر نام مترجم مرتب میشود.
+
+\begin{itemize}[nosep]
+\begin{latin}
+\item[] []
+{\tt translator}, tran(s). {\tt translateyear}. {\tt title}. {\tt edition} edn. {\tt impression} imp. {\tt volume volumes series number}. {\tt organization}. {\tt address: publisher}. {\tt note}. ISBN: {\tt isbn}. ISSN: {\tt issn}. DOI: {\tt doi}. Retrieved {\tt urldate}. URL: {\tt url}. 
+\end{latin}
+
+\item[] []
+{\persianttfamily مترجم}، مترجم(‍ان). {\persianttfamily تاریخ ترجمه}. {\persianttfamily عنوان}. ویرایش {\persianttfamily …}. چاپ {\persianttfamily …}. {\persianttfamily جلد، جلدها، فروست، شماره}. {\persianttfamily سازمان}. {\persianttfamily محل نشر: ناشر}. {\persianttfamily یادداشت}. شابک: {\persianttfamily …}. شاپا: {\persianttfamily …}. شناسه‌ی دیجیتال: {\persianttfamily …}. دسترسی در {\persianttfamily …}. تارنما: {\persianttfamily …}. 
+\end{itemize}
+
+
+
+
+
+\subsection{مجموعه مقاله‌ای که زیر عنوان مرتب میشوند}
+اگر برای مدخل \verb|@proceedings|، مشخصه‌های \verb|editor|، \verb|compiler|، و \verb|translator| وارد نشوند، باید مشخصه‌ی \verb|key| آن مدخل برابر با مشخصه‌ی \verb|title| وارد شود که زیر عنوان مرتب گردد.
+
+\begin{itemize}[nosep]
+\begin{latin}
+\item[] []
+{\tt title}. {\tt year}. {\tt edition} edn. {\tt impression} imp. {\tt volume volumes series number}. {\tt organization}. {\tt address: publisher}. {\tt note}. ISBN: {\tt isbn}. ISSN: {\tt issn}. DOI: {\tt doi}. Retrieved {\tt urldate}. URL: {\tt url}. 
+\end{latin}
+
+\item[] []
+{\persianttfamily عنوان}. {\persianttfamily تاریخ}. ویرایش {\persianttfamily …}. چاپ {\persianttfamily …}. {\persianttfamily جلد، جلدها، فروست، شماره}. {\persianttfamily سازمان}. {\persianttfamily محل نشر: ناشر}. {\persianttfamily یادداشت}. شابک: {\persianttfamily …}. شاپا: {\persianttfamily …}. شناسه‌ی دیجیتال: {\persianttfamily …}. دسترسی در {\persianttfamily …}. تارنما: {\persianttfamily …}.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+\section{مقاله‌ی چاپ شده در مجموعه مقاله‌های یک همایش}
+برای استناد به مقاله‌ای که در یک همایش ارائه شده سپس در مجموعه مقاله‌های آن همایش چاپ شده است از مدخل \verb|@inproceedings| استفاده کنید. الگوی چیدمان مشخصه‌های مدخل \verb|@inproceedings| در ادامه ارائه شده است.
+
+
+
+
+
+\subsection{مقاله‌ای که زیر نام نویسنده مرتب میشود}
+اگر برای مدخل \verb|@inproceedings|، مشخصه‌ی \verb|author| وارد گردد، زیر نام نویسنده مرتب میشود.
+
+\begin{itemize}[nosep]
+\begin{latin}
+\item[] []
+{\tt author}. {\tt year}. {\tt title}. by {\tt by}. {\tt booktitle, pages, volume, volumes}. {\tt edition} edn. {\tt impression} imp. Translated by {\tt translator}. {\tt translateyear}. {\tt series number}. Compiled by {\tt compiler}. Edited by {\tt editor}. {\tt address: publisher}. {\tt note}. ISBN: {\tt isbn}. ISSN: {\tt issn}. DOI: {\tt doi}. Retrieved {\tt urldate}. URL: {\tt url}. 
+\end{latin}
+
+\item[] []
+{\persianttfamily نویسنده}. {\persianttfamily تاریخ}. {\persianttfamily عنوان}. نوشته‌ی {\persianttfamily …}. {\persianttfamily عنوان‌کتاب، صفحه‌ها، جلد، جلدها}. ویرایش {\persianttfamily …}. چاپ {\persianttfamily …}. ترجمه‌ی {\persianttfamily …}. {\persianttfamily تاریخ ترجمه}. {\persianttfamily فروست شماره}. گردآوری {\persianttfamily …}. ویراسته‌ی {\persianttfamily …}. {\persianttfamily محل نشر: ناشر}. {\persianttfamily یادداشت}. شابک: {\persianttfamily …}. شاپا: {\persianttfamily …}. شناسه‌ی دیجیتال: {\persianttfamily …}. دسترسی در {\persianttfamily …}. تارنما: {\persianttfamily …}. 
+\end{itemize}
+
+
+
+
+
+\subsection{مقاله‌ای که زیر نام مترجم مرتب میشود}
+اگر برای مدخل \verb|@inproceedings|، مشخصه‌ی \verb|author| وارد نشود، در صورت وجود مشخصه‌ی \verb|translator|، زیر نام مترجم مرتب میشود.
+
+\begin{itemize}[nosep]
+\begin{latin}
+\item[] []
+{\tt translator}, trans. {\tt translateyear}. {\tt title}. by {\tt by}. {\tt year}. {\tt booktitle, pages, volume, volumes}. {\tt edition} edn. {\tt impression} imp. {\tt series number}. Compiled by {\tt compiler}. Edited by {\tt editor}. {\tt address: publisher}. {\tt note}. ISBN: {\tt isbn}. ISSN: {\tt issn}. DOI: {\tt doi}. Retrieved {\tt urldate}. URL: {\tt url}. 
+\end{latin}
+
+\item[] []
+{\persianttfamily مترجم}، مترجم(‍ان). {\persianttfamily تاریخ ترجمه}. {\persianttfamily عنوان}. نوشته‌ی {\persianttfamily …}. {\persianttfamily تاریخ}. {\persianttfamily عنوان‌کتاب، صفحه‌ها، جلد، جلدها}. ویرایش {\persianttfamily …}. چاپ {\persianttfamily …}. {\persianttfamily فروست شماره}. گردآوری {\persianttfamily …}. ویراسته‌ی {\persianttfamily …}. {\persianttfamily محل نشر: ناشر}. {\persianttfamily یادداشت}. شابک: {\persianttfamily …}. شاپا: {\persianttfamily …}. شناسه‌ی دیجیتال: {\persianttfamily …}. دسترسی در {\persianttfamily …}. تارنما: {\persianttfamily …}. 
+\end{itemize}
+
+
+
+
+
+\subsection{مقاله‌ای که زیر عنوان مرتب میشود}
+اگر برای مدخل \verb|@inproceedings|، مشخصه‌های \verb|author|، و \verb|translator| وارد نشوند، باید مشخصه‌ی \verb|key| آن مدخل برابر با مشخصه‌ی \verb|title| وارد شود که زیر عنوان مرتب گردد.
+
+\begin{itemize}[nosep]
+\begin{latin}
+\item[] []
+{\tt title}. {\tt year}. by {\tt by}. {\tt booktitle, pages, volume, volumes}. {\tt edition} edn. {\tt impression} imp. {\tt series number}. Compiled by {\tt compiler}. Edited by {\tt editor}. {\tt address: publisher}. {\tt note}. ISBN: {\tt isbn}. ISSN: {\tt issn}. DOI: {\tt doi}. Retrieved {\tt urldate}. URL: {\tt url}. 
+\end{latin}
+
+\item[] []
+{\persianttfamily عنوان}. {\persianttfamily تاریخ}. نوشته‌ی {\persianttfamily …}. {\persianttfamily عنوان‌کتاب، صفحه‌ها، جلد، جلدها}. ویرایش {\persianttfamily …}. چاپ {\persianttfamily …}. {\persianttfamily فروست شماره}. گردآوری {\persianttfamily …}. ویراسته‌ی {\persianttfamily …}. {\persianttfamily محل نشر: ناشر}. {\persianttfamily یادداشت}. شابک: {\persianttfamily …}. شاپا: {\persianttfamily …}. شناسه‌ی دیجیتال: {\persianttfamily …}. دسترسی در {\persianttfamily …}. تارنما: {\persianttfamily …}. 
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+\section{مقاله‌ی ارائه شده در یک همایش}
+برای استناد به مقاله‌ای که در یک همایش ارائه شده است از مدخل \verb|@conference| استفاده کنید. الگوی چیدمان مشخصه‌های مدخل \verb|@conference| در ادامه ارائه شده است.
+
+
+
+
+
+\subsection{مقاله‌هایی که زیر نام نویسنده مرتب میشود}
+اگر برای مدخل \verb|@conference|، مشخصه‌ی \verb|author| وارد گردد، زیر نام نویسنده مرتب میشود.
+
+\begin{itemize}[nosep]
+\begin{latin}
+\item[] []
+{\tt author}. {\tt year}. {\tt title}. by {\tt by}. Translated by {\tt translator}. {\tt translateyear}. {\tt series, number, pages}. Edited by {\tt editor}. {\tt organization, address, publisher}. {\tt note}. ISSN: {\tt issn}. DOI: {\tt doi}. Retrieved {\tt urldate}. URL: {\tt url}. 
+\end{latin}
+
+\item[] []
+{\persianttfamily نویسنده}. {\persianttfamily تاریخ}. {\persianttfamily عنوان}. نوشته‌ی {\persianttfamily …}. ترجمه‌ی {\persianttfamily …}. {\persianttfamily تاریخ ترجمه}. {\persianttfamily فروست، شماره، صفحه‌ها}. ویراسته‌ی {\persianttfamily …}. {\persianttfamily سازمان، محل نشر، ناشر}. {\persianttfamily یادداشت}. شاپا: {\persianttfamily …}. شناسه‌ی دیجیتال: {\persianttfamily …}. دسترسی در {\persianttfamily …}. تارنما: {\persianttfamily …}. 
+\end{itemize}
+
+
+
+
+
+\subsection{مقاله‌هایی که زیر نام مترجم مرتب میشود}
+اگر برای مدخل \verb|@conference|، مشخصه‌ی \verb|author| وارد نشود، در صورت وجود مشخصه‌ی \verb|translator|، زیر نام مترجم مرتب میشود.
+
+\begin{itemize}[nosep]
+\begin{latin}
+\item[] []
+{\tt translator}, trans. {\tt translateyear}. {\tt title}. by {\tt by}. {\tt year}. {\tt series, number, pages}. Edited by {\tt editor}. {\tt organization, address, publisher}. {\tt note}. ISSN: {\tt issn}. DOI: {\tt doi}. Retrieved {\tt urldate}. URL: {\tt url}. 
+\end{latin}
+
+\item[] []
+{\persianttfamily مترجم}، مترجم(‍ان). {\persianttfamily  تاریخ ترجمه}. {\persianttfamily عنوان}. نوشته‌ی {\persianttfamily …}. {\persianttfamily تاریخ}.  {\persianttfamily فروست، شماره، صفحه‌ها}. ویراسته‌ی {\persianttfamily …}. {\persianttfamily سازمان، محل نشر، ناشر}. {\persianttfamily یادداشت}. شاپا: {\persianttfamily …}. شناسه‌ی دیجیتال: {\persianttfamily …}. دسترسی در {\persianttfamily …}. تارنما: {\persianttfamily …}. 
+\end{itemize}
+
+
+
+
+
+\subsection{مقاله‌هایی که زیر عنوان مرتب میشود}
+اگر برای مدخل \verb|@conference|، مشخصه‌های \verb|author|، و \verb|translator| وارد نشوند، باید مشخصه‌ی \verb|key| آن مدخل برابر با مشخصه‌ی \verb|title| وارد شود که زیر عنوان مرتب گردد.
+
+\begin{itemize}[nosep]
+\begin{latin}
+\item[] []
+{\tt title}. {\tt year}. by {\tt by}. {\tt series, number, pages}. Edited by {\tt editor}. {\tt organization, address, publisher}. {\tt note}. ISSN: {\tt issn}. DOI: {\tt doi}. Retrieved {\tt urldate}. URL: {\tt url}. 
+\end{latin}
+
+\item[] []
+{\persianttfamily عنوان}. {\persianttfamily تاریخ}. نوشته‌ی {\persianttfamily …}. {\persianttfamily فروست، شماره، صفحه‌ها}. ویراسته‌ی {\persianttfamily …}. {\persianttfamily سازمان، محل نشر، ناشر}. {\persianttfamily یادداشت}. شاپا: {\persianttfamily …}. شناسه‌ی دیجیتال: {\persianttfamily …}. دسترسی در {\persianttfamily …}. تارنما: {\persianttfamily …}. 
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+\section{پارسا (پایان‌نامه‌ی کارشناسی‌ارشد، و رساله‌ی دکتری)}
+برای استناد به پایان‌نامه‌ی کارشناسی‌ارشد از مدخل \verb|@mastersthesis| و برای استناد به رساله‌ی دکتری از مدخل \verb|@phdthesis| استفاده کنید. الگوی چیدمان مشخصه‌های مدخل پارسا در ادامه ارائه شده است.
+
+
+
+
+
+\subsection{پارساهایی که زیر نام نویسنده مرتب میشوند}
+اگر برای مدخل پارسا، مشخصه‌ی \verb|author| وارد گردد، زیر نام نویسنده مرتب میشود.
+
+\begin{itemize}[nosep]
+\begin{latin}
+\item[] []
+{\tt author}. {\tt year}. {\tt title}. {\tt comment}. {\tt school, type, address}. {\tt note}. DOI: {\tt doi}. Retrieved {\tt urldate}. URL: {\tt url}. 
+\end{latin}
+
+\item[] []
+{\persianttfamily نویسنده}. {\persianttfamily تاریخ}. {\persianttfamily عنوان}. {\persianttfamily توضیح}. {\persianttfamily دانشگاه، نوع‌سند، محل نشر}. شناسه‌ی دیجیتال: {\persianttfamily …}. دسترسی در {\persianttfamily …}. تارنما: {\persianttfamily …}. 
+\end{itemize}
+
+
+
+
+
+\subsection{پارساهایی که زیر عنوان مرتب میشوند}
+اگر برای مدخل پارسا، مشخصه‌ی \verb|author| وارد نشود، باید مشخصه‌ی \verb|key| آن مدخل برابر با مشخصه‌ی \verb|title| وارد شود که زیر عنوان مرتب گردد.
+
+\begin{itemize}[nosep]
+\begin{latin}
+\item[] []
+{\tt title}. {\tt year}. {\tt comment}. {\tt school, type, address}. {\tt note}. DOI: {\tt doi}. Retrieved {\tt urldate}. URL: {\tt url}. 
+\end{latin}
+
+\item[] []
+{\persianttfamily عنوان}. {\persianttfamily تاریخ}. {\persianttfamily توضیح}. {\persianttfamily دانشگاه، نوع‌سند، محل نشر}. شناسه‌ی دیجیتال: {\persianttfamily …}. دسترسی در {\persianttfamily …}. تارنما: {\persianttfamily …}. 
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+\section{اثرهای منتشر نشده}
+برای استناد به اثرهایی که به صورت رسمی منتشر نشده‌اند از مدخل \verb|@unpublished| استفاده کنید. الگوی چیدمان مشخصه‌های مدخل \verb|@unpublished| در ادامه ارائه شده است.
+
+
+
+
+
+\subsection{اثرهای منتشر نشده که زیر نام نویسنده مرتب میشود}
+اگر برای مدخل \verb|@unpublished|، مشخصه‌ی \verb|author| وارد گردد، زیر نام نویسنده مرتب میشود.
+
+\begin{itemize}[nosep]
+\begin{latin}
+\item[] []
+{\tt author}. {\tt year}. {\tt title}. {\tt comment}. by {\tt by}. Translated by {\tt translator}. {\tt translateyear}. {\tt howpublished}. {\tt note}. DOI: {\tt doi}. Retrieved {\tt urldate}. URL: {\tt url}. 
+\end{latin}
+
+\item[] []
+{\persianttfamily نویسنده}. {\persianttfamily تاریخ}. {\persianttfamily عنوان}. {\persianttfamily توضیح}. نوشته‌ی {\persianttfamily …}. ترجمه‌ی {\persianttfamily …}. {\persianttfamily تاریخ ترجمه}. {\persianttfamily چگونگی‌انتشار}. {\persianttfamily یادداشت}. شناسه‌ی دیجیتال: {\persianttfamily …}. دسترسی در {\persianttfamily …}. تارنما: {\persianttfamily …}. 
+\end{itemize}
+
+
+
+
+
+\subsection{اثرهای منتشر نشده که زیر نام مترجم مرتب میشود}
+اگر برای مدخل \verb|@unpublished|، مشخصه‌ی \verb|author| وارد نشود، در صورت وجود مشخصه‌ی \verb|translator|، زیر نام مترجم مرتب میشود.
+
+\begin{itemize}[nosep]
+\begin{latin}
+\item[] []
+{\tt translator}, trans. {\tt translateyear}. {\tt title}. {\tt comment}. by {\tt by}. {\tt year}. {\tt howpublished}. {\tt note}. DOI: {\tt doi}. Retrieved {\tt urldate}. URL: {\tt url}. 
+\end{latin}
+
+\item[] []
+{\persianttfamily مترجم}, مترجم(‍ان). {\persianttfamily تاریخ ترجمه}. {\persianttfamily عنوان}. {\persianttfamily توضیح}. نوشته‌ی {\persianttfamily …}. {\persianttfamily تاریخ}. {\persianttfamily چگونگی‌انتشار}. {\persianttfamily یادداشت}. شناسه‌ی دیجیتال: {\persianttfamily …}. دسترسی در {\persianttfamily …}. تارنما: {\persianttfamily …}. 
+\end{itemize}
+
+
+
+
+
+\subsection{اثرهای منتشر نشده که زیر عنوان مرتب میشود}
+اگر برای مدخل \verb|@unpublished|، مشخصه‌های \verb|author|، و \verb|translator| وارد نشوند، باید مشخصه‌ی \verb|key| آن مدخل برابر با مشخصه‌ی \verb|title| وارد شود که زیر عنوان مرتب گردد.
+
+\begin{itemize}[nosep]
+\begin{latin}
+\item[] []
+{\tt title} {\tt year}. {\tt comment}. by {\tt by}. {\tt howpublished}. {\tt note}. DOI: {\tt doi}. Retrieved {\tt urldate}. URL: {\tt url}. 
+\end{latin}
+
+\item[] []
+{\persianttfamily عنوان}. {\persianttfamily تاریخ}. {\persianttfamily توضیح}. نوشته‌ی {\persianttfamily …}. {\persianttfamily چگونگی‌انتشار}. {\tt address: publisher}. {\persianttfamily یادداشت}. شناسه‌ی دیجیتال: {\persianttfamily …}. دسترسی در {\persianttfamily …}. تارنما: {\persianttfamily …}. 
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+\section{دیگر اثرها}
+برای استناد به اثرهایی که در دسته‌های ارائه شده‌ی پیشین قرار نمیگیرند، از مدخل متفرقه (\verb|@misc|) استفاده کنید. الگوی چیدمان مشخصه‌های مدخل \verb|@misc| در ادامه ارائه شده است.
+
+
+
+
+
+\subsection{اثر متفرقه که زیر نام نویسنده مرتب میشود}
+اگر برای مدخل \verb|@misc|، مشخصه‌ی \verb|author| وارد گردد، زیر نام نویسنده مرتب میشود.
+
+\begin{itemize}[nosep]
+\begin{latin}
+\item[] []
+{\tt author}. {\tt year}. {\tt title}. by {\tt by}. {\tt howpublished}. {\tt note}. DOI: {\tt doi}. Retrieved {\tt urldate}. URL: {\tt url}. 
+\end{latin}
+
+\item[] []
+{\persianttfamily نویسنده}. {\persianttfamily تاریخ}. {\persianttfamily عنوان}. نوشته‌ی {\persianttfamily …}. {\persianttfamily چگونگی‌انتشار}. {\persianttfamily یادداشت}. شناسه‌ی دیجیتال: {\persianttfamily …}. دسترسی در {\persianttfamily …}. تارنما: {\persianttfamily …}. 
+\end{itemize}
+
+
+
+
+
+\subsection{اثر متفرقه که زیر عنوان مرتب میشود}
+اگر برای مدخل \verb|@misc|، مشخصه‌ی \verb|author| وارد نشود، باید مشخصه‌ی \verb|key| آن مدخل برابر با مشخصه‌ی \verb|title| وارد شود که زیر عنوان مرتب گردد.
+
+\begin{itemize}[nosep]
+\begin{latin}
+\item[] []
+{\tt title} {\tt year}. {\tt comment}. by {\tt by}. {\tt howpublished}. {\tt note}. DOI: {\tt doi}. Retrieved {\tt urldate}. URL: {\tt url}. 
+\end{latin}
+
+\item[] []
+{\persianttfamily عنوان}. {\persianttfamily تاریخ}. {\persianttfamily توضیح}. نوشته‌ی {\persianttfamily …}. {\persianttfamily چگونگی‌انتشار}. {\persianttfamily محل نشر: ناشر}. {\persianttfamily یادداشت}. شناسه‌ی دیجیتال: {\persianttfamily …}. دسترسی در {\persianttfamily …}. تارنما: {\persianttfamily …}. 
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+\end{document}
